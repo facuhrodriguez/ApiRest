@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const playerService = require("./services/playerService");
+const bodyParser = require("body-parser");
 
+app.use(express.json());
 app.get("/api/player", (req, res) => {
   playerService
     .findAll()
@@ -9,6 +11,7 @@ app.get("/api/player", (req, res) => {
       return res.status(200).json(players);
     })
     .catch((error) => {
+      console.log("error", error);
       return res.status(500).json(error);
     });
 });
@@ -45,6 +48,7 @@ app.delete("/api/player/:playerId", (req, res) => {
       return res.status(200).json(data.ok);
     })
     .catch((error) => {
+      console.log(error);
       return res.status(500).json(error);
     });
 });
