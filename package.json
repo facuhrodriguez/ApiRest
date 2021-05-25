@@ -1,0 +1,25 @@
+{
+  "name": "apirest",
+  "version": "1.0.0",
+  "description": "Api rest para taller de desarrollo web",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facuhrodriguez/ApiRest.git"
+  },
+  "author": "Facundo Rodríguez - Dolores García Elissondo",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/facuhrodriguez/ApiRest/issues"
+  },
+  "homepage": "https://github.com/facuhrodriguez/ApiRest#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11"
+  }
+}
