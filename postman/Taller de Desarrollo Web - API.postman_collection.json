@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "16349fc9-8db5-49a1-998b-db9f7474eca3",
+		"name": "Taller de Desarrollo Web - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.10/api/player/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"10"
+					],
+					"path": [
+						"api",
+						"player",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"playerData\": {\n        \"name\": \"Sergio\",\n        \"surname\": \"Agüero\",\n        \"nickName\": \"Kun\",\n        \"position\": \"del\",\n        \"age\": 32,\n        \"country\": \"Argentina\",\n        \"team\": {\n            \"name\": \"Manchester City\",\n            \"place\": {\n                \"city\": \"Manchester\",\n                \"country\": \"Inglaterra\"\n            },\n            \"nickName\": \"citizen\"\n        },\n        \"value\": 25000000\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.10/api/player/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"10"
+					],
+					"path": [
+						"api",
+						"player",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.10/api/player/:playerId",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"10"
+					],
+					"path": [
+						"api",
+						"player",
+						":playerId"
+					],
+					"variable": [
+						{
+							"key": "playerId",
+							"value": "60aceb8c62ebcf06036448ce"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"playerData\": {\n        \"name\": \"Facundo\",\n        \"age\": 34\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.10/api/player/:playerId",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"10"
+					],
+					"path": [
+						"api",
+						"player",
+						":playerId"
+					],
+					"variable": [
+						{
+							"key": "playerId",
+							"value": "60acebc562ebcf06036448cf"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
